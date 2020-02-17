@@ -1,0 +1,54 @@
+* {
+    background: none;
+    text-decoration: none;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    border: none;
+    outline: none;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    min-height: 100%;
+    height: 100%;
+}
+
+main,
+picture,
+section {
+    display: block;
+}
+
+#general {
+    background: #fff;
+    padding-top: 50px;
+}
+
+#general::selection {
+    background: #3e60b0;
+    color: #fff;
+}
+
+#general main {
+    background: #fff;
+    min-height: 617px;
+    position: relative;
+    z-index: 2;
+    transition: transform 0.4s;
+}
+
+main.menu-open {
+    transform: translateX(calc(100vw - 70px));
+}
+
+/*limpa tags que são inseridas pelo WP*/
+#general div:empty,
+#general p:empty {
+    display: none;
+}
+
+#general br {
+    display: none;
+}

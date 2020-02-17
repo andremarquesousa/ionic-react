@@ -1,0 +1,78 @@
+.header {
+  background: #fff;
+  height: 50px;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 2;
+  width: 100%;
+  transition: transform 0.4s;
+}
+
+.menuOpen.header {
+  transform: translateX(calc(100vw - 70px));
+}
+
+.logo {
+  background: url('../assets/images/general/logo.svg') no-repeat center / contain;
+  display: block;
+  font-size: 0;
+  width: 162px;
+  height: 30px;
+  margin: 10px auto 0;
+}
+
+.menuButton {
+  position: absolute;
+  left: 15px;
+  top: 0;
+  bottom: 0;
+  width: 40px;
+  height: 40px;
+  margin: auto 0;
+}
+
+.menuButton span,
+.menuButton span:before,
+.menuButton span:after {
+  background-color: #c32417;
+  font-size: 0;
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 35px;
+  height: 4px;
+  margin: auto;
+}
+
+.menuButton span {
+  transition: background 0.4s;
+}
+
+.menuButton span:before,
+.menuButton span:after {
+  content: '';
+  transition: transform 0.4s;
+}
+
+.menuButton span:before {
+  transform: translateY(-9px);
+}
+
+.menuButton span:after {
+  transform: translateY(9px);
+}
+
+.menuOpen .menuButton span {
+  background-color: transparent; 
+}
+
+.menuOpen .menuButton span:before {
+  transform: rotate(-45deg);
+}
+
+.menuOpen .menuButton span:after {
+  transform: rotate(45deg);
+}

@@ -1,0 +1,35 @@
+.menu {
+  background-color: #c32417;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 1;
+  width: calc(100vw - 70px);
+  height: 100%;
+  overflow-y: auto;
+  padding: 20px 0;
+}
+
+.logo {
+    background: url('../assets/images/general/logo-menu.svg') no-repeat center / contain;
+    display: block;
+    font-size: 0;
+    width: 230px;
+    height: 45px;
+    margin: 0 0 0 20px
+}
+
+.list {
+    margin: 40px 0 0;
+}
+
+.listItem {
+    color: #fff;
+    font-size: 18px;
+    padding: 10px 20px;
+    border-top: solid 1px #fff;
+}
+
+.listItem:first-child {
+    border-top: none;
+}
