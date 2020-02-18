@@ -33,7 +33,7 @@ section {
 
 #general main {
     background: #fff;
-    min-height: 617px;
+    min-height: calc(100vh - 50px);
     position: relative;
     z-index: 2;
     transition: transform 0.4s;

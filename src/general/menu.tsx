@@ -17,9 +17,13 @@ class Menu extends React.Component<any, any> {
 
   async getMenuItems() {
     const response = await axios.get('https://www.metropoles.com/wp-json/metropoles/v1/menu');
-    const {data} = response;
-    this.setState({menuItems: data});
-    console.log(this.state.menuItems);
+    let items : any[] = [];
+    let {data} = response;
+    data = Object.values(data);
+    data.map((item: any) => {
+      items.push(item);
+    })
+    this.setState({menuItems: items});
   }
 
   render() {
@@ -27,10 +31,17 @@ class Menu extends React.Component<any, any> {
       <nav className={styles.menu}>
         <span className={styles.logo}><Link to="/">Metrópoles.com</Link></span>
         <ul className={styles.list}>
-          {/*{this.state.menuItems.map(
+          {this.state.menuItems.map(
             (item: any, key: any) =>
-              <li className={styles.listItem} key={item.id}>{item.title}</li>
-          )}*/}
+              <li className={styles.listItem} key={item.id} onClick={this.props.openMenu}>
+                <Link to={{
+                  pathname: `/categoria/${item.id}`,
+                  state: {
+                    name: item.title
+                  }
+                }}>{item.title}</Link>
+              </li>
+          )}
         </ul>
       </nav>
     );

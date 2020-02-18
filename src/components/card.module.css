@@ -1,0 +1,47 @@
+.card {
+    background: #fff;
+    position: relative;
+    margin: 30px 0 0;
+    padding: 10px 0;
+}
+
+.card:first-child {
+    margin-top: 0;
+}
+
+.title {
+    color: #000;
+    font-size: 24px;
+    padding: 0 20px;
+}
+
+.image {
+    display: block;
+    width: 100%;
+    margin: 10px 0 0;
+}
+
+.image img {
+    display: block;
+    width: 100%;
+}
+
+.category {
+    color: #c32417;
+    font-size: 12px;
+    text-transform: uppercase;
+    margin: 10px 0 0;
+    padding: 0 20px;
+}
+
+.date {
+    display: inline-block;
+    vertical-align: middle;
+    color: #000;
+    text-transform: none;
+    margin-left: 5px;
+}
+
+.date:before {
+    content: '- '
+}

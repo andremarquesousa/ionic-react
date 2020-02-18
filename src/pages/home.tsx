@@ -1,16 +1,31 @@
 import React from 'react';
-import {Link} from "react-router-dom";
-// 'https://www.metropoles.com/wp-json/metropoles/v1/last_news?tag=bsb60-documentario',
+import News from '../components/news';
+import axios from 'axios';
 
 class Home extends React.Component<any, any> {
-  render() {
-    return (
-      <div>
-        <h2>home</h2>
-        <p><Link to="/post/1">Post</Link></p>
-      </div>
-    );
-  }
+    constructor(props: any) {
+        super(props);
+        this.state = {
+            posts: []
+        }
+    }
+
+    componentDidMount() {
+        this.getPosts();
+    }
+
+    async getPosts() {
+        const response = await axios.get('https://www.metropoles.com/wp-json/metropoles/v1/last_news');
+        this.setState({posts: response.data});
+    }
+
+    render() {
+        return (
+            <div>
+                <News posts={this.state.posts} />
+            </div>
+        );
+    }
 }
 
 export default Home;

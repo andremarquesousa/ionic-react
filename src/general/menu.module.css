@@ -26,10 +26,16 @@
 .listItem {
     color: #fff;
     font-size: 18px;
-    padding: 10px 20px;
     border-top: solid 1px #fff;
 }
 
 .listItem:first-child {
     border-top: none;
+}
+
+.listItem a {
+  display: block;
+  color: inherit;
+  width: 100%;
+  padding: 10px 20px;
 }
