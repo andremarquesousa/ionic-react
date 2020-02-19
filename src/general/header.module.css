@@ -1,11 +1,12 @@
 .header {
   background: #fff;
-  height: 50px;
+  height: 75px;
   position: fixed;
   left: 0;
   top: 0;
   z-index: 3;
   width: 100%;
+  padding: 25px 0 0;
   transition: transform 0.4s;
 }
 
@@ -32,7 +33,7 @@
 .menuButton {
   position: absolute;
   left: 15px;
-  top: 0;
+  top: 25px;
   bottom: 0;
   width: 40px;
   height: 40px;

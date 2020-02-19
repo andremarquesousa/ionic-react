@@ -16,7 +16,7 @@ class Menu extends React.Component<any, any> {
   }
 
   async getMenuItems() {
-    const response = await axios.get('https://www.metropoles.com/wp-json/metropoles/v1/menu');
+    const response = await axios.get('https://www.metropoles.com/wp-json/metropoles/v1/menu'});
     let items : any[] = [];
     let {data} = response;
     data = Object.values(data);
